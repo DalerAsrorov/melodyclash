@@ -11,9 +11,13 @@ The application will utilize the following tools:
  - HTML/CSS
 
 # How to run 
-To run the application in your local machine, you should: 
-1) Navigate to the directory you want to have the repository to be in using (e.g. cd ~/User/Docs/apps)
-2) git cone https://github.com/DalerAsrorov/storyteller.git
-3) Run the server as a localhost. If you are using Mac, do 'php -S localhost:8000' (exclude single quites). 
-4) Go to your browser and enter: localhost:8000
-5) Here you go! 
+*To run the application in your local machine, you should:* 
+
+1. Navigate to the directory you want to have the repository to be in using (e.g. cd ~/User/Docs/apps)
+2. git cone https://github.com/DalerAsrorov/storyteller.git
+3. Run the server as a localhost. 
+   * If you are using Mac, it would be `php -S localhost:8000`  
+4. Go to your browser and enter: `localhost:8000`
+5. Here you go! The app should be up and running. 
+
+
