@@ -1,0 +1,43 @@
+<div id="songs" class="subpage songs-sub">
+	<div class="container">
+    <div class="row">
+			<div id="options-section" class="option-section-class" layout-padding layout-wrap layout="row" layout-sm="column">
+				<md-whiteframe class="md-whiteframe-z5 options-box artist-box" layout layout-align="center center" id="option-artists" flex="100">
+							<a href="#/clash/{{vm.genre}}" class="top-button-a">
+								<md-button aria-label="popular sogns" class="md-raised box-caption box-songs">
+									<span> Popular Songs </span>
+									<span>
+								</md-button>
+							</a>
+				</md-whiteframe>
+		   </div>
+      <div class="wrapper songs-wrapper col-lg-10 col-md-10 col-sm-11 col-xs-11" style="float: none; margin: 0 auto" >
+        <md-whiteframe class="md-whiteframe-z5 options-box grid songs-element-wrapper" id="option-songs" style="margin: 10px 0px;" ng-repeat="song in vm.sound">
+              <md-button  class="md-raised button-container box-songs songs" >
+                  <div flex="20">
+                  <md-button class="artist-song-image" class="md-icon-button md-primary" aria-label="Song icon." >
+                    <ng-md-icon flex="20" icon="my_library_music" size="48" options="{"duration": 375, "rotation": "none"}"></ng-md-icon>
+                  </md-button>
+                </div>
+                    <div class="song-content" flex>
+                      <ul class="songs-list">
+                        <li class="song-list-item">
+                          <div>"{{ song.name }}""</div>
+                          <div class="song-artist-name"> by {{ song.artist }}</div>
+                          <div class="song-artist-name"> {{ song.album }}</div>
+                          <div class="audio-controls-wrapper">
+                            <input class="form-control ng-pristine ng-untouched ng-valid progress" type="range" min="0" max="1" step="0.01" ng-model="song.progress">
+                            <md-button aria-label="button" ng-click='song.paused ? song.play() : song.pause()' aria-label="play-paus"><span class="glyphicon glyphicon-play play" ></span></md-button>
+                            <md-button aria-label="button" ng-click='song.restart()' aria-label="play-paus"><span class="glyphicon glyphicon-stop play" ></span></md-button >
+                            <md-button aria-label="button" ng-click='song.muting = !song.muting' aria-label="play-paus"><span class="glyphicon glyphicon-volume-off play"></span></md-button >
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+            </a>
+        </md-whiteframe>
+      </div>
+    </div>
+	</div>
+</div>

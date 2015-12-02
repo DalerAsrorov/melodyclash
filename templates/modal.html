@@ -1,0 +1,11 @@
+<div class="search-window" ng-if="!vm.notSubmitted">
+  <form ng-submit="vm.submit()" class="modal-submit">
+      <md-input-container class="modal-input-container">
+        <label>Search an artist...</label>
+        <md-button class="raised modal-search-submit" type="submit" id="submit" value="Submit" flex>
+          <ng-md-icon icon="search" size="35" options="{"duration": 375, "rotation": "none"}"></ng-md-icon>
+        </md-button>
+        <input placeholder="Type name of the artist..." type="text" ng-model="vm.text" class="modal-search-input" name="text" required />
+      </md-input-container>
+  </form>
+</div>

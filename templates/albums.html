@@ -1,0 +1,29 @@
+<div id="artists" class="subpage artists-sub">
+	<div class="container" >
+		<div id="options-section" class="option-section-class" layout-padding layout-wrap layout="row" layout-sm="column">
+			<md-whiteframe class="md-whiteframe-z5 options-box artist-box" layout layout-align="center center" id="option-artists" flex="100">
+						<a href="#/clash/{{vm.genre}}" class="top-button-a">
+							<md-button aria-label="popular artists" class="md-raised box-caption box-albums">
+								<span ng-if="!vm.hover" >Popular Albums </span>
+							</md-button>
+						</a>
+			</md-whiteframe>
+	   </div>
+     <div class="wrapper" >
+        <md-whiteframe class="md-whiteframe-z5 options-box col-lg-5 col-md-5 col-sm-10 col-xs-10 grid" layout layout-align="center center" ng-repeat="album in vm.topAlbums" id="option-artists" >
+          	<a href="#/clash/{{vm.genre}}/albums/{{album.name}}">
+              <md-button  class="md-raised button-container album-box">
+                  <img style="float: left;" ng-src="{{album.images[0].url}}">
+                  <br>
+                  <div>
+                    <div class="artist-name"><span class="weight">Album:</span> {{album.name}}</div>
+                    <div class="artist-name"><span class="weight">Artist:</span> {{album.artist.name }}</div>
+                    <div class="artist-name"><span class="weight">Release Date:</span> {{album.released | date: 'MM/dd/yyyy' }}</div>
+                    <!--{{1288323623006 | date:'MM/dd/yyyy @ h:mma'}}: 10/28/2010 @ 8:40PM -->
+                  </div>
+              </md-button>
+            </a>
+        </md-whiteframe>
+    </div>
+	</div>
+</div>

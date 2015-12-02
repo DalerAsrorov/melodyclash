@@ -1,0 +1,25 @@
+$event-link-color: #0000CD;
+
+.heightAuto {
+  height: auto;
+}
+.md-button.md-raised:not([disabled]).event-box {
+  background: $green-color;
+  margin: 0;
+  width: 100%;
+  padding: 0;
+}
+
+.caption-links.venue-link {
+  color: 	$event-link-color;
+
+  &:hover {
+    color: lighten($event-link-color, 13%);
+    background: none;
+    text-decoration: underline;
+  }
+}
+
+md-progress-circular.events {
+  margin: 200px auto;
+}

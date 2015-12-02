@@ -1,0 +1,30 @@
+<div id="artists" class="subpage artists-sub">
+	<div class="container" >
+		<div id="options-section" class="option-section-class" layout-padding layout-wrap layout="row" layout-sm="column">
+			<md-whiteframe class="md-whiteframe-z5 options-box artist-box" layout layout-align="center center" id="option-artists" flex="100">
+						<a href="#/clash/{{vm.genre}}" class="top-button-a">
+							<md-button ng-mouseover="vm.hoverIn()" ng-mouseleave="vm.hoverOut()" aria-label="popular artists" class="md-raised box-caption box-artists">
+								<span ng-if="!vm.hover" >Popular Artists </span>
+								<span>
+							</md-button>
+						</a>
+			</md-whiteframe>
+	   </div>
+
+
+     <div class="wrapper" >
+        <md-whiteframe class="md-whiteframe-z5 options-box options-song-box col-lg-2 col-md-2 col-sm-3 col-xs-5 grid" layout layout-align="center center" ng-repeat="artist in vm.artists" id="option-artists" >
+          	<a href="#/clash/{{vm.genre}}/artists/{{artist.name}}">
+              <md-button  aria-label="popular artists" class="md-raised button-containe artist-box">
+                  <img class="artist-image" src="{{artist.image}}">
+                  <br>
+                  <div>
+                    <div class="artist-name"><span class="weight">Artist:</span> {{artist.name}}</div>
+                    <div class="artist-name"><span class="weight">Popularity:</span> {{artist.hotttnesss * 100 | limitTo:2 }}</div>
+                  </div>
+              </md-button>
+            </a>
+        </md-whiteframe>
+    </div>
+	</div>
+</div>

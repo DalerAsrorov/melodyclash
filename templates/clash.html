@@ -1,0 +1,48 @@
+<div id="clash" class="subpage clash">
+	<div class="container">
+		<div id="options-section" layout-padding layout-wrap layout="row" layout-sm="column">
+			<md-whiteframe ng-include="'/templates/ngIncludes/artists-slider.html'" class="md-whiteframe-z5 options-box" id="option-artists" flex>
+			</md-whiteframe>
+			<md-whiteframe ng-include="'/templates/ngIncludes/albums-slider.html'" class="md-whiteframe-z5 options-box" id="option-songs" flex>
+			</md-whiteframe>
+			<md-whiteframe ng-include="'/templates/ngIncludes/songs-slider.html'" class="md-whiteframe-z5 options-box" id="option-albums" flex>
+			</md-whiteframe>
+			<md-whiteframe ng-include="'/templates/ngIncludes/events-slider.html'" class="md-whiteframe-z5 options-box" id="option-events" flex>
+			</md-whiteframe>
+		</div>
+
+		<md-button class="md-fab md-fab-top-right right"  aria-label="Photos" ng-click="vm.open('sm')">
+      <ng-md-icon icon="search" size="30" options="{"duration": 375, "rotation": "none"}"></ng-md-icon>
+      <md-tooltip class="search-tooltip">
+      	{{ vm.searchArtistModalTex }}
+    	</md-tooltip>
+		</md-button>
+
+		<br><br>
+		<div layout="row" layout-sm="column">
+			<md-whiteframe class="md-whiteframe-z5 options-box second-layer col-lg-3" id="option-artists">
+					<div class="popularity-rate" >
+						<div class="hidden-help" ng-if="vm.infoHovered"> {{ vm.hottnessInfo }} </div>
+						<div class="nav-box popularity">
+								{{ vm.avgPopRateText }}
+							<span class="glyphicon glyphicon-info-sign info-question" ng-mouseover="vm.hoverInfoIn()" ng-mouseout="vm.hoverInfoOut()"></span>
+						</div>
+						<div class="popularity-number"> {{ vm.popularityRate | limitTo: 2 }} <span class="outOfHundreed">/ {{vm.topPercent}} </span> </div>
+					</div>
+			</md-whiteframe>
+			<md-whiteframe class="md-whiteframe-z5 options-box second-layer col-lg-9" id="option-artists" >
+					<div class="about-genre" flex>
+						<div class="nav-box description" >{{vm.aboutGenreText}}</div>
+						<div class="genre-description"> {{ vm.description }} </div>
+					</div>
+			</md-whiteframe>
+		</div>
+
+		<br><br>
+		<div ng-if="!vm.mapLoaded" class="map-wait-notice"> {{ vm.mapInfoNotice }} </div>
+		<div layout="column" class="map-container" ng-show="vm.mapLoaded">
+				<div class="nav-box popularity map-nav" >{{ vm.mapNav }}</div>
+				<map map="map" id="map-canvas">
+				</map>
+		</div>
+</div>

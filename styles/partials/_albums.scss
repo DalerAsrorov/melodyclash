@@ -1,0 +1,21 @@
+.md-button.md-raised:not([disabled]).box-albums {
+  background: $red-color;
+}
+.md-button.md-raised:not([disabled]).album-box {
+  background: $red-color;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.info-wrapper {
+  background: $red-color;
+}
+
+.main {
+  font-weight: 800;
+}
+
+.info {
+  text-align: center;
+}

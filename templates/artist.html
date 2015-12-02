@@ -1,0 +1,58 @@
+<div id="artist-page" class="subpage artist-page">
+	<div class="container" >
+		<div id="options-section" class="option-section-class" layout-padding layout-wrap layout="row" layout-sm="column">
+
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 buttons-wrapper">
+				<a href="#/clash/{{vm.genre}}"><md-button class="md-raised clash-link">clash</md-button> </a> <br>
+				<a href="#/clash/{{vm.genre}}/artists"><md-button class="md-raised artists-link">{{vm.genre}} artists</md-button></a>
+			</div>
+
+			</div>
+      <div class="wrapper-i" layout="row" layout-sm="column">
+        <div layout="column" class="wrapper-left-i" flex="40" >
+          <md-whiteframe class="md-whiteframe-z5 options-box artist-box" layout layout-align="center center" id="option-artists" >
+    						<img class="artist-image-i" ng-src="{{vm.artistImageURL}}">
+          </md-whiteframe>
+          <div class="artist-name-i">
+              {{vm.artistName}}
+          </div>
+        </div>
+        <div layout="column" class="wrapper-right-i" flex="60">
+          <md-whiteframe class="md-whiteframe-z5 options-box song-box" layout="column" id="option-artists" >
+              <div class="nav-songs"> <span> Popular Songs </span></div>
+							<md-progress-linear aria-label="progress bar" class="md-accent md-hue-1 ng-scope progress-linear-songs" md-mode="indeterminate" ng-if="!vm.songsLoaded"></md-progress-linear>
+              <div class="list-of-songs" ng-if="vm.songsLoaded">
+                <ul class="songs-list">
+                	<li  ng-repeat="song in vm.sound" class="song-list-item">
+										<label>{{ song.songName }}</label>
+										<input class="form-control ng-pristine ng-untouched ng-valid progress" type="range" min="0" max="1" step="0.01" ng-model="song.progress">
+										<md-button aria-label="button" ng-click='song.paused ? song.play() : song.pause()' aria-label="play-paus"><span class="glyphicon glyphicon-play play" ></span></md-button>
+										<md-button aria-label="button" ng-click='song.restart()' aria-label="play-paus"><span class="glyphicon glyphicon-stop play" ></span></md-button >
+										<md-button aria-label="button" ng-click='song.muting = !song.muting' aria-label="play-paus"><span class="glyphicon glyphicon-volume-off play"></span></md-button >
+										<a aria-label="button"class="link" ng-href="{{song.songURL}}" target="_blank"><md-button class="buy" aria-label="Buy Button."><span class="glyphicon glyphicon-shopping-cart play"></span></md-button > </a>
+	                </li>
+                </ul>
+              </div>
+          </md-whiteframe>
+        </div>
+      </div>
+			<br>
+			<div layout="column" class="wrapper-bottom-i" flex>
+				  <md-whiteframe class="md-whiteframe-z5 options-box bio-box" layout="column" id="option-artists" >
+						<div class="bio-nav nav-songs"> Bio </div>
+						<div class="bio"> {{vm.bio | limitTo: 2200}}...<span> <a class="link" target="_blank" ng-href="{{vm.bioMore}}">[Read More] </a> </span> </div>
+					</md-whiteframe>
+				 	<md-whiteframe class="md-whiteframe-z5 options-box video-box" layout="column" >
+								<div class="bio-nav nav-songs"> Related Artists </div>
+								<div class="video-section">
+									<a class="related-artist" ng-repeat="artist in vm.relatedAritsts" href="#/clash/{{vm.genre}}/artists/{{artist.name}}">
+										<md-button aria-label="button" class="raised related-artist-button">
+											<img ng-src="{{artist.images[0].url}}" class="related-artist-image">
+											<div class="caption"> {{ artist.name }} </div>
+										</md-button>
+									</a>
+								</div>
+					</md-whiteframe>
+			</div>
+	</div>
+</div>

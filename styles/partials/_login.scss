@@ -1,0 +1,111 @@
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+@import url(https://fonts.googleapis.com/css?family=Dosis);
+
+$theme-color: #0B1C30;
+$border-color: #1A2E46;
+$font-color: #80dfff;
+
+body {
+  font-family: 'Dosis', sans-serif;
+  background: $theme-color;
+}
+
+#login-page {
+  height: 100%;
+  background: url('../img/background.jpg') no-repeat center center fixed;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#input-box {
+  margin: 0 auto;
+  margin-top: 195px;
+}
+
+#form-title {
+  text-align: center;
+  color: $font-color;
+  font-family: 'Indie Flower', cursive;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+#userForm {
+  float: none;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  padding: 40px;
+  background: rgba(11, 28, 48, 0.7);
+  border: 1px solid $border-color;
+
+}
+
+.md-toolbar-tools h1 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: inherit;
+}
+
+md-sidenav.md-locked-open {
+  width: 150px !important;
+  min-width: 150px !important;
+  max-width: 150px !important;
+}
+
+md-input-container .md-placeholder:not(.md-select-label), md-input-container label:not(.md-no-float) {
+  color: white;
+}
+
+md-input-container:not(.md-input-has-value) input:not(:focus).input-style{
+  border-color: white;
+  color: white;
+
+}
+md-input-container.md-default-theme:not(.md-input-invalid).md-input-focused .md-input.input-style{
+  border-color: $border-color;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+md-input-container.md-default-theme .md-input {
+  color: white;
+  border-color: white;
+}
+md-input-container.md-default-theme:not(.md-input-invalid).md-input-has-value label {
+  color: lightblue;
+}
+
+.input-label {
+  color: white;
+}
+
+.center-div {
+  float: none;
+  display: block;
+  margin: 0 auto;
+}
+
+.start-button-div {
+  margin-top: 25px;
+}
+
+.md-button.md-fab.md-mini.start-button {
+  background: $font-color;
+  width: 60px;
+  height: 60px;
+}
+
+.errors-wrapper {
+  color: red;
+  margin-top: -15px;
+  margin-left: 3px;
+}
+
+.input-box {
+  display: inline;
+}

@@ -1,0 +1,32 @@
+<div id="events" class="subpage" ng-class="{'heightAuto': vm.eventsLoaded}">
+	<div class="container" >
+		<div id="options-section" class="option-section-class" layout-padding layout-wrap layout="row" layout-sm="column">
+			<md-whiteframe class="md-whiteframe-z5 options-box artist-box" layout layout-align="center center" id="option-artists" flex="100">
+						<a href="#/clash/{{vm.genre}}" class="top-button-a">
+							<md-button aria-label="popular artists" class="md-raised box-caption box-events">
+								<span ng-if="!vm.hover"> Events Nearby </span>
+								<span>
+							</md-button>
+						</a>
+			</md-whiteframe>
+	   </div>
+
+     <div ng-if="!vm.eventsLoaded">
+       <md-progress-circular md-diameter="130" md-mode="indeterminate" class="md-accent events"></md-progress-circular>
+     </div>
+
+     <div class="wrapper" ng-if="vm.eventsLoaded">
+        <md-whiteframe ng-repeat="event in  vm.eventsA" class="md-whiteframe-z5 options-box col-lg-5 col-md-8 col-sm-9 col-xs-10 grid" id="option-artists" >
+            <md-button  aria-label="popular artists" class="md-raised button-containe event-box">
+                <img class="artist-image" ng-src="{{event.artistImage}}" style="width: 100%; height: 300px;">
+                <div>  {{event.artistName}} </div>
+                <div>  {{event.eventDate | date:'MM/dd/yyyy @ h:mma' }} </div>
+                <div>  {{event.city}}, {{event.state}} </div>
+                <div> <a class="caption-links venue-link" href="{{event.venueUrl}}" target="_blank"> {{event.venueName}} </a> </div>
+                <div> <a class="caption-links venue-link" href="{{event.ticketUrl}}" target="_blank"> {{ event.ticketStatus }} </a>  </div>
+
+            </md-button>
+        </md-whiteframe>
+    </div>
+	</div>
+</div>

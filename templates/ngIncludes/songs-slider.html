@@ -1,0 +1,19 @@
+<uib-carousel interval="vm.myInterval" no-wrap="vm.noWrapSlides" aria-label="Slides for songs.">
+  <uib-slide ng-repeat="slide in vm.songSlides" active="slide.active">
+    <a href="#/clash/{{vm.genre}}/songs/{{vm.genreId}}">
+      <md-button class="md-raised pic-box">
+        <img ng-src="{{slide.image}}" class="pic-box-img" style="margin:auto;">
+        <div class="carousel-caption songs">
+          <span>{{ slide.song }} </span> <br>
+          <span class="album-artist-caption"> by {{ slide.name }} </span>
+        </div>
+      </md-button>
+    </a>
+  </uib-slide>
+  <a href="#/clash/{{vm.genre}}/songs/{{vm.genreId}}" class="caption-links">
+    <md-button aria-label="Show All Songs" ng-mouseover="vm.hoverSongIn()" ng-mouseleave="vm.hoverSongOut()" class="md-raised box-caption box-songs">
+      <span ng-if="!vm.songHover" >Popular Songs </span>
+      <span ng-if="vm.songHover">Show All</span>
+    </md-button>
+  </a>
+</uib-carousel>

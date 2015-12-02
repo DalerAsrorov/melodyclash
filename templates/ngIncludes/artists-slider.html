@@ -1,0 +1,18 @@
+<uib-carousel  interval="vm.myInterval" no-wrap="vm.noWrapSlides">
+  <uib-slide ng-repeat="slide in vm.artistsSlides" active="slide.active" aria-label="Slides for artists.">
+    <a href="#/clash/{{vm.genre}}/artists/{{slide.name}}">
+      <md-button class="md-raised pic-box">
+        <img ng-src="{{slide.image}}" class="pic-box-img" style="margin:auto;">
+        <div class="carousel-caption">
+          {{ slide.name }}
+        </div>
+      </md-button>
+    </a>
+  </uib-slide>
+  <a href="#/clash/{{vm.genre}}/artists" class="caption-links">
+    <md-button ng-mouseover="vm.hoverIn()" ng-mouseleave="vm.hoverOut()" aria-label="popular artists" class="md-raised box-caption box-artists">
+      <span ng-if="!vm.hover" >Popular Artists </span>
+      <span ng-if="vm.hover">Show All</span>
+    </md-button>
+  </a>
+</uib-carousel>

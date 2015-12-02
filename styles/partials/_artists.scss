@@ -1,0 +1,72 @@
+$theme-color: #0B1C30;
+$border-color: #1A2E46;
+$font-color: #80dfff;
+$font-weight: 700;
+$default-font-size: 18px;
+$lightblue-color: #5F9EA0;
+$red-color: #9f6260;
+$blue-color: #607d96;
+$green-color: #9d9f60;
+
+.top-button-a {
+  width: 100%;
+}
+
+.artist-image {
+  width: 100px;
+  height: 100px;
+}
+
+.weight {
+  font-weight: 800;
+}
+
+.button-container {
+  margin: 0;
+}
+
+.artist-image {
+  width: 100%;
+}
+
+#artists {
+  height: none;
+}
+.container {
+  background: $theme-color;
+  padding:0;
+}
+
+.grid {
+  margin: 10px;
+  display: inline-block;
+  float: none;
+
+  img {
+    height: 170px;
+
+  }
+}
+
+.artists-sub {
+  height: auto;
+}
+
+.wrapper {
+  float: none;
+  display:block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.md-button.md-raised:not([disabled]).artist-box {
+  background: $lightblue-color;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 599px) {
+    #options-section {
+      height: 50px;
+    }
+}

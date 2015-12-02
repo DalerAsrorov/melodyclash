@@ -1,0 +1,44 @@
+[layout=row]>[flex="20"].artist-song-image {
+  float: left;
+  width: 160px;
+  height: 100%;
+}
+
+.songs-sub {
+  height: auto;
+}
+
+.songs-right-wrapper {
+  height: 190px;
+  font-weight: 800;
+}
+
+.wrapper.songs-wrapper {
+  padding: 0;
+}
+
+.songs-element-wrapper {
+  width: 100%;
+}
+
+.song-artist-name {
+  font-style: italic;
+}
+
+.md-button.md-raised:not([disabled]).song-button {
+  width: 100%;
+  margin: 0;
+  color: white;
+  font-weight: 800;
+}
+
+.md-button.md-raised:not([disabled]).box-songs.songs {
+  width: 100%;
+  padding: 0;
+  margin:0;
+}
+
+
+.md-button.md-raised:not([disabled]).box-songs.songs:hover {
+
+}

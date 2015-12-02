@@ -1,0 +1,316 @@
+$theme-color: #0B1C30;
+$border-color: #1A2E46;
+$font-color: #80dfff;
+$font-weight: 700;
+$default-font-size: 18px;
+$lightblue-color: #5F9EA0;
+$red-color: #9f6260;
+$blue-color: #607d96;
+$green-color: #9d9f60;
+$caption-color: #cce5ff;
+
+md-toolbar-tools h1 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: inherit;
+}
+
+.map-wait-notice {
+  font-size: 40px;
+  text-align:center;
+  float: none;
+  display: block;
+  margin: 0 auto;
+}
+
+md-sidenav.md-locked-open {
+  width: 150px !important;
+  min-width: 150px !important;
+  max-width: 150px !important;
+}
+
+ .subpage{
+  height: 100%;
+  background: $theme-color;
+  color: white;
+  font-size: $default-font-size;
+}
+
+.subpage.clash {
+  height: auto;
+}
+
+.search-tooltip {
+  font-size: 15px;
+}
+
+#carousel .cloud9-item, #buttons button {
+  cursor: pointer;
+}
+
+.progress {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+  display: block;
+}
+
+#options-section {
+  margin-top: 20px;
+}
+
+.options-box {
+  margin: 0 5px;
+}
+
+//changing the color of the box-shadow
+// to white color
+.md-whiteframe-z5.options-box {
+  box-shadow: 0 8px 10px -5px rgba(255,255,255,.2),0 16px 24px 2px rgba(255,255,255,.14),0 6px 30px 5px rgba(255,255,255,.12);
+  padding: 0;
+}
+
+.carousel {
+    width: 100%;
+}
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img {
+  margin:0;
+  width: 100%;
+  height: 200px;
+}
+
+.carousel-indicators {
+  display: none;
+}
+
+.carousel-caption {
+  font-weight: $font-weight;
+  font-size: 20px;
+  height: 48px;
+
+}
+.carousel-caption.album {
+  margin-bottom: 57px;
+}
+.carousel-caption.songs {
+    margin-bottom: 57px;
+}
+
+.box-artists {
+  background: $lightblue-color;
+}
+.box-albums {
+  background: $red-color;
+}
+.box-songs {
+  background: $blue-color;
+}
+.box-events {
+  background: $green-color;
+}
+
+.box-caption {
+  text-align: center;
+  font-weight: $font-weight;
+  font-style: italic;
+}
+
+.album-caption {
+  width: 100%;
+  display: block;
+  float: none;
+  overflow: auto;
+  margin: 0 auto;
+}
+
+.album-artist-caption {
+  color: $caption-color;
+  font-size: 14px;
+  font-style: italic;
+  position: relative;
+  top: -10px;
+}
+
+a.caption-links {
+      text-decoration: none;
+      color: white;
+
+    &:hover {
+      color: white;
+      background: green;
+
+      .box-albums{
+        background: green;
+      }
+    }
+  }
+
+.md-button.md-raised:not([disabled]).pic-box {
+  padding: 0;
+  margin: 0;
+  width: 100%
+}
+
+img.pic-box-img {
+  width: 100%;
+  height: 200px;
+}
+
+.md-button.md-raised:not([disabled]).box-caption{
+  margin: 0;
+  width: 100%;
+  border-radius: 0;
+  color: white;
+
+}
+
+.md-button.md-raised:not([disabled]).box-songs {
+  background: $blue-color;
+
+  &:hover {
+    background: lighten($blue-color, 10%);
+  }
+}
+.md-button.md-raised:not([disabled]).box-albums {
+  background: $red-color;
+
+  &:hover {
+    background: lighten($red-color, 10%);
+  }
+}
+.md-button.md-raised:not([disabled]).box-artists {
+  background: $lightblue-color;
+
+  &:hover {
+    background: lighten($lightblue-color, 10%);
+  }
+}
+.md-button.md-raised:not([disabled]).box-events {
+  background: $green-color;
+
+  &:hover {
+    background: lighten($green-color, 10%);
+  }
+}
+
+.event-artist-caption {
+  color: $caption-color;
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.popularity-rate {
+  text-align: center;
+}
+
+.nav-box.popularity {
+  background: #6D6DDA;
+  font-weight: 800;
+  font-size: 22px;
+  padding: 3px;
+  border-radius: 5px 5px 0px 0px;
+
+}
+
+.nav-box.description {
+  background: #4ac1e8;
+  font-weight: 800;
+  font-size: 22px;
+  padding: 3px 3px 3px 15px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.genre-description {
+  padding: 10px;
+}
+
+.popularity-number {
+  font-size: 135px;
+  font-weight: 800;
+
+}
+
+.outOfHundreed {
+  font-size: 25px;
+}
+
+.second-layer {
+  border-radius: 5px;
+}
+
+.modal-content {
+  margin-top: 250px;
+}
+
+.modal-search-input {
+  float: left;
+}
+
+.modal-submit {
+  margin: 0;
+}
+
+.md-button.md-default-theme.modal-search-submit {
+  margin:0;
+  background: $lightblue-color;
+}
+
+md-input-container.modal-input-container {
+  padding: 0;
+}
+
+
+md-input-container.md-default-theme .md-input.modal-search-input {
+  color: black;
+  font-weight: 800;
+}
+
+.hidden-help {
+    position: absolute;
+    height: 120px;
+    width: 250px;
+    top: -120px;
+    left: 140;
+    background: $lightblue-color;
+    padding: 10px
+}
+
+.glyphicon.info-question {
+  float: right;
+  top: 4.5px;
+  right: 8px;
+
+  &:hover {
+    color: $lightblue-color;
+  }
+}
+
+map {
+  height: 380px;
+  width: 100%;
+  margin-bottom: 50px;
+  -webkit-box-shadow: 0px -1px 25px 0px rgba(255,255,255,1);
+  -moz-box-shadow: 0px -1px 25px 0px rgba(255,255,255,1);
+  box-shadow: 0px -1px 25px 0px rgba(255,255,255,1);
+}
+
+.nav-box.popularity.map-nav {
+  padding: 10px;
+  background: #B3D1FF;
+  -webkit-box-shadow: 0px -1px 25px 0px rgba(255,255,255,1);
+  -moz-box-shadow: 0px -1px 25px 0px rgba(255,255,255,1);
+  box-shadow: 0px -1px 25px 0px rgba(255,255,255,1);
+}
+
+.gm-style .gm-style-iw {
+  text-align: center;
+  color: black;
+}
+
+.map-artist {
+  font-weight: 800;
+  font-size: 15px;
+}
