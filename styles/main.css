@@ -328,6 +328,12 @@ map {
   font-weight: 800;
   font-size: 15px; }
 
+.modal-escape-instr {
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  background: #9d9f60; }
+
 .top-button-a {
   width: 100%; }
 
