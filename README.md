@@ -44,4 +44,8 @@ to get the image of the artist. Or, for example, the when there is call to get t
 the iTunes API, it will provide the required name and release date, and then given the name
 of the album, I have another function call to Spotify API to get the track previews of
 the required album. There are many other instances where APIs communicate to each other to
-get specific type of information (songs, artists, albums, media content, events).   
+get specific type of information (songs, artists, albums, media content, events).
+
+## Unit Testing
+
+The tests were successfully deployed to Travis CL. The results are shown here: https://travis-ci.org/DalerAsrorov/melodyclash  
