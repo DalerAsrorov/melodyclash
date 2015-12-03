@@ -1,5 +1,8 @@
 {
   "scripts": {
     "test": "./node_modules/karma/bin/karma start --single-run --browsers PhantomJS"
+  },
+  "dependencies": {
+    "express": "^4.13.3"
   }
 }
