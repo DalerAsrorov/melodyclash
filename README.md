@@ -8,7 +8,7 @@ Web application that allows users to create stories with special features such a
 
 ## Link to the App
 
-http://www.dummylink.com/ --- will update later
+http://melodyclash.net23.net/#/
 
 ## Main Technologies
 The application will utilize the following tools:
