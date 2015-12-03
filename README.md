@@ -4,7 +4,9 @@
 # Final Project -- MelodyClash
 
 ## Description
-Web application that allows users to create stories with special features such as graphs of the most visited countries, cool stories to visit, favorite stories, and others.
+Web application that allows users to find top artists, albums, songs, and events near their location based on the genre entered
+by the user. It shows all kinds of info about the best things happening near and has algorithms that solves the problem with
+finding the top events. 
 
 ## Link to the App
 
