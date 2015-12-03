@@ -6,11 +6,11 @@
 ## Description
 Web application that allows users to find top artists, albums, songs, and events near their location based on the genre entered
 by the user. It shows all kinds of info about the best things happening near and has algorithms that solves the problem with
-finding the top events. 
+finding the top events.
 
 ## Link to the App
 
-http://melodyclash.net23.net/#/
+http://melodyclash.herokuapp.com/
 
 ## Main Technologies
 The application will utilize the following tools:
