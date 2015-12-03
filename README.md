@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/DalerAsrorov/melodyclash.svg)](https://travis-ci.org/DalerAsrorov/melodyclash)
+
+
 # Final Project -- MelodyClash
 
 ## Description
