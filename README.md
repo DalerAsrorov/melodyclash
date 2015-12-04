@@ -18,7 +18,7 @@ The application will utilize the following tools:
  - AngularJS
  - Angular Material Framework
  - Bootstrap UI
- - HTML5/CSS3
+ - HTML5/CSS3/JQuery
  - Karma, Jasmine, and PhantomJS (for testing).
 
 ## APIs
