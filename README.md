@@ -22,16 +22,6 @@ The application will utilize the following tools:
  - HTML5/CSS3
  - Karma, Jasmine, and PhantomJS (for testing).
 
-## How to run
-*To run the application in your local machine, you should:*
-
-1. Navigate to the directory you want to have the repository to be in using (e.g. cd ~/User/Docs/apps)
-2. git clone https://github.com/DalerAsrorov/melodyclash.git
-3. Run the server as a localhost.
-   * If you are using Mac, it could be `php -S localhost:8000`  
-4. Go to your browser and enter: `localhost:8000`
-5. Here you go! The app should be up and running.
-
 ## APIs
 *The APIs used to get and render data are the following:*
   - Google Maps API
