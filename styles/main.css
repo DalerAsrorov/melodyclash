@@ -377,6 +377,9 @@ map {
     border-bottom: 1px solid lightblue;
     border-top: 1px solid lightblue; }
 
+.feed-note {
+  font-size: 13px; }
+
 .top-button-a {
   width: 100%; }
 

@@ -54,7 +54,7 @@
 
 		<div layout="row" layout-sm="column" class="main-feed-wrapper">
 			<md-whiteframe class="md-whiteframe-z5 options-box feeds-wrapper " id="option-artists" >
-				<div class="feed-nav nav-box"> {{ vm.feedNav }} </div>
+				<div class="feed-nav nav-box"> {{ vm.feedNav }} <span class="feed-note"> (Scroll down to see the newest message) </span> </div>
 				<form role="form" ng-submit="vm.addMessage()">
 					<input class="form-control feed-input" placeholder="Share your thoughts! Press Enter to post." ng-model="vm.newMessage" autofocus>
 				</form>
