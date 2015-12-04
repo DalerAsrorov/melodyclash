@@ -4,20 +4,20 @@
             <h3 id="form-title"> MelodyClash </h3>
             <div class="input-box" >
              <md-input-container flex>
-                <label class="input-label">Email</label>
-                <input ng-model="user.email" type="email" name="email" ng-change="switch()" class="input-style" required>
+                <label class="input-label">Name</label>
+                <input ng-model="user.name" type="text" name="name" ng-change="switch()" class="input-style" required>
               </md-input-container>
 							<div role="alert" class="errors-wrapper">
-								<span class="error" ng-show="userForm.email.$error.required && !emailIsEmpty">
+								<span class="error" ng-show="userForm.name.$error.required && !nameIsEmpty">
 									Required!
 								</span>
-							 <span class="error" ng-show="userForm.email.$error.email">
-								 Not a valid email!</span>
+							 <span class="error" ng-show="userForm.name.$error.name">
+								 Not a valid name!</span>
 						 	</div>
             </div>
             <div class="input-box">
               <md-input-container flex>
-                <label class="input-label">Favorite Genre {{hi}}</label>
+                <label class="input-label">Favorite Genre</label>
                 <input ng-model="user.genre" type="text" name="genre" class="input-style" ng-change="switch()" required>
               </md-input-container>
 							<div role="alert" class="errors-wrapper">
@@ -27,7 +27,7 @@
             	</div>
             <div layout layout-sm="row" class="start-button-div">
               <md-button type="submit" id="submit" value="Submit" class="md-fab md-mini center-div start-button" aria-label="Start app!"
-							ng-disabled="!(user.email || user.genre)" id="start-button">
+							ng-disabled="!(user.name && user.genre)" id="start-button">
                 <ng-md-icon icon="play_arrow" size="30"></ng-md-icon>
               </md-button>
             </div>

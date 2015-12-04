@@ -1,5 +1,11 @@
 <div id="clash" class="subpage clash">
 	<div class="container">
+		<div class="clash-header">
+			<md-whiteframe  class="md-whiteframe-z5 options-box col-lg-12 clash-box" id="option-artists">
+				Welcome to MusicClash, {{vm.username | capitalize}}! {{vm.genre | capitalize}} is a great choice!
+			</md-whiteframe>
+		</div>
+
 		<div id="options-section" layout-padding layout-wrap layout="row" layout-sm="column">
 			<md-whiteframe ng-include="'/templates/ngIncludes/artists-slider.html'" class="md-whiteframe-z5 options-box" id="option-artists" flex>
 			</md-whiteframe>
@@ -45,4 +51,22 @@
 				<map map="map" id="map-canvas">
 				</map>
 		</div>
+
+		<div layout="row" layout-sm="column" class="main-feed-wrapper">
+			<md-whiteframe class="md-whiteframe-z5 options-box feeds-wrapper " id="option-artists" >
+				<div class="feed-nav nav-box"> {{ vm.feedNav }} </div>
+				<form role="form" ng-submit="vm.addMessage()">
+					<input class="form-control feed-input" placeholder="Share your thoughts! Press Enter to post." ng-model="vm.newMessage" autofocus>
+				</form>
+				<div class="list-group feeds-inner-wrapper">
+            <div ng-repeat="message in vm.messages" class="list-group-item one-message">
+                <div class="view">
+                    <label>{{message.name}}</label>
+                    <div> {{message.message}} </div>
+                </div>
+            </div>
+        </div>
+			</md-whiteframe>
+		</div>
+
 </div>

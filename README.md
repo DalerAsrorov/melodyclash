@@ -9,7 +9,6 @@ by the user. It shows all kinds of info about the best things happening near and
 finding the top events.
 
 ## Link to the App
-
 http://melodyclash.herokuapp.com/
 
 ## Main Technologies

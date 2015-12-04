@@ -1,16 +1,16 @@
 angular
   .module('app')
-  .controller('MainCtrl', ['$scope', '$mdSidenav', '$location', function($scope, $mdSidenav, $location, $route){
+  .controller('MainCtrl', ['$scope', '$mdSidenav', '$location', '$route', 'nameService', function($scope, $mdSidenav, $location, $route, nameService){
     $scope.user = {};
-    $scope.user.email = "";
+    $scope.user.name = "";
     $scope.user.genre = "";
 
-    $scope.emailIsEmpty = true;
+    $scope.nameIsEmpty = true;
     $scope.genreIsEmpty = true;
 
     $scope.switch = function() {
-      if ($scope.user.email != "") {
-          $scope.emailIsEmpty = false;
+      if ($scope.user.name != "") {
+          $scope.nameIsEmpty = false;
       }
       if($scope.user.genre != "") {
         $scope.genreIsEmpty = false;
@@ -18,15 +18,8 @@ angular
     }
 
     $scope.submit = function() {
-      // check if correct
-      // check if the user exists
-      // if exists, show him previous searches & show him the stats page
-      // if not, show him the page & store the user to the database
-
-      console.log($scope.user); // store the user
-    
+      nameService.setName($scope.user.name);
       $location.path('/clash/' + $scope.user.genre.toLowerCase());
-
     }
 
  }]);

@@ -29,11 +29,23 @@ md-sidenav.md-locked-open {
   max-width: 150px !important;
 }
 
- .subpage{
+ .subpage {
   height: 100%;
   background: $theme-color;
   color: white;
   font-size: $default-font-size;
+}
+
+.clash-header {
+  margin-bottom: 20px;
+}
+
+.md-whiteframe-z5.options-box.clash-box {
+  font-size: 30px;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  font-weight: 800;
 }
 
 .subpage.clash {
@@ -320,4 +332,49 @@ map {
   font-size: 12px;
   text-align: center;
   background: $green-color;
+}
+
+.feed-nav {
+  padding: 10px;
+  font-weight: 800;
+  font-size: 22px;
+}
+
+.main-feed-wrapper {
+  margin-bottom: 25px;
+  margin-left: -6px;
+  height: 320px;
+}
+
+.feeds-wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+
+  form {
+    margin: 0;
+  }
+
+
+  .feed-input {
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 800;
+    border-radius: 0;
+    background: white;
+    border: none;
+  }
+
+  .feeds-inner-wrapper {
+    height: 234px;
+    overflow: auto;
+  }
+
+  .list-group-item.one-message {
+    border-radius: 0;
+    background: $theme-color;
+    border: none;
+    border-bottom: 1px solid lightblue;
+    border-top: 1px solid lightblue;
+  }
 }

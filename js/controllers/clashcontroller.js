@@ -1,6 +1,6 @@
 angular
   .module('app')
-  .controller('ClashCtrl', function(artists, genre, iTunes, Spotify, SearchGenre, $location, BandsInTown, $uibModal, $route) {
+  .controller('ClashCtrl', function(artists, genre, iTunes, Spotify, SearchGenre, $location, BandsInTown, $uibModal, $route, $firebaseArray, $firebaseObject, nameService) {
       var vm = this;
       var name = "";
       var sum = 0;
@@ -13,6 +13,7 @@ angular
       vm.popularityRate = 0;
       vm.description = "";
       vm.genreId;
+      vm.feedNav = "Feed Live!";
       vm.searchArtistModalText = "Search Artist";
       vm.avgPopRateText = "Avg. Popularity Rate";
       vm.hottnessInfo = "This number indicates the average % of popularity rate taken from their performance in charts and social media. ";
@@ -21,10 +22,10 @@ angular
       vm.mapNav = "Map of Top Events Near You";
       vm.topPercent = "100";
       vm.aboutGenreText = "About Genre";
+      vm.username = nameService.getName();
       var map;
       var lat = 30.141198;
       var lon = -38.787720;
-
       var center = new google.maps.LatLng(lat, lon);
 
       // returns the string that
@@ -37,7 +38,7 @@ angular
         '</div> <div class="map-date">' + d.getMonth() + "/" + d.getDay() + "/" + d.getFullYear()  + '</div>' +
         '<div>' ;
 
-        console.log(contentStr);
+        //console.log(contentStr);
         return contentStr;
 
       };
@@ -155,7 +156,7 @@ angular
                     center: center,
                     zoom: 5
                   });
-                  console.log(artist);
+                  //console.log(artist);
                   // plot the points on Google Maps
                   addEventToMap(artist, artist.venue.latitude, artist.venue.longitude, map);
                   map.setZoom(11);
@@ -270,4 +271,26 @@ angular
           state: state
         });
       };
+
+      // implementing code for the feed
+      var FIREBASE_URL = 'https://melodyclash.firebaseio.com/';
+      var fireRef = new Firebase(FIREBASE_URL);
+
+      vm.messages =  $firebaseArray(fireRef);
+      vm.newMassage = '';
+
+      vm.addMessage = function(){
+        var newMessage = vm.newMessage.trim();
+        if (!newMessage.length) {
+            return;
+        }
+        // push to firebase
+        vm.messages.$add({
+            name: vm.username,
+            message: newMessage
+        });
+        vm.newMessage = '';
+    };
+
+
   });
