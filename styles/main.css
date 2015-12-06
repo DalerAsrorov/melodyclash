@@ -116,7 +116,9 @@ md-sidenav.md-locked-open {
 
 .md-whiteframe-z5.options-box.clash-box {
   font-size: 30px;
-  margin: 0;
+  float: none;
+  display: block;
+  margin: 0 auto;
   padding: 10px;
   text-align: center;
   font-weight: 800; }

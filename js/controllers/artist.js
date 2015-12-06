@@ -14,7 +14,6 @@ angular
     vm.bio = "";
     vm.bioMore = "";
 
-
     vm.isOpen = false;
     vm.demo = {
       isOpen: false,
