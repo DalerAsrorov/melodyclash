@@ -18,7 +18,9 @@ angular
     }
 
     $scope.submit = function() {
+      localStorage.clear(); // removing all the previous user names
       nameService.setName($scope.user.name);
+      localStorage.setItem('username', $scope.user.name);
       $location.path('/clash/' + $scope.user.genre.toLowerCase());
     }
 

@@ -22,15 +22,14 @@ angular
       vm.mapNav = "Map of Top Events Near You";
       vm.topPercent = "100";
       vm.aboutGenreText = "About Genre";
+      vm.u = nameService.getName();
       vm.username = nameService.getName();
       var map;
       var lat = 30.141198;
       var lon = -38.787720;
       var center = new google.maps.LatLng(lat, lon);
 
-      // returns the string that
-      // will be contained in the
-      // info box.
+      vm.username = localStorage.getItem('username');
       function setContent(artistObj) {
         var d = new Date(artistObj.on_sale_datetime);
 
@@ -44,7 +43,6 @@ angular
       };
 
       function addEventToMap (artistObj, lat, lon, map) {
-        //console.log(artistObj);
         var myLatLng = new google.maps.LatLng(parseFloat(lat), parseFloat(lon));
         var newCenter = new google.maps.LatLng(lat, lon);
 
