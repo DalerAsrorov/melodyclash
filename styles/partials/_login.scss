@@ -14,15 +14,6 @@ body {
   background: $theme-color;
 }
 
-// #login-page {
-//   background: url('../img/background.jpg') no-repeat center center fixed;
-//   background-repeat: no-repeat;
-//   -webkit-background-size: cover;
-//   -moz-background-size: cover;
-//   -o-background-size: cover;
-//   background-size: cover;
-// }
-
 #input-box {
   margin: 0 auto;
   margin-top: 160px;
@@ -111,4 +102,19 @@ md-input-container.md-default-theme:not(.md-input-invalid).md-input-has-value la
 
 .input-box {
   display: inline;
+}
+
+
+@media screen and (max-width: 500px) {
+    #input-box {
+      margin-top: 60px;
+
+      form {
+        border-radius: 70px;
+      }
+
+      h3 {
+        font-size: 22px;
+      }
+    }
 }
