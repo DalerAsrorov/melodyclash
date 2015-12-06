@@ -133,6 +133,11 @@ input[type=range] {
 
     &:hover {
       color: white;
+
+      .caption {
+        background: white;
+        color: black;
+      }
     }
 
     .caption {

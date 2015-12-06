@@ -535,6 +535,9 @@ input[type=range] {
   border: 1px solid #b0c4de; }
   .related-artist:hover {
     color: white; }
+    .related-artist:hover .caption {
+      background: white;
+      color: black; }
   .related-artist .caption {
     text-align: center;
     background: #5F9EA0;
