@@ -4,18 +4,14 @@ body {
   font-family: 'Dosis', sans-serif;
   background: #0B1C30; }
 
-#login-page {
-  height: 100%;
-  background: url("../img/background.jpg") no-repeat center center fixed;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+.parent-container {
+  background: #0B1C30; }
 
 #input-box {
   margin: 0 auto;
-  margin-top: 195px; }
+  position: relative;
+  top: 50%;
+  transform: translateY(50%); }
 
 #form-title {
   text-align: center;
