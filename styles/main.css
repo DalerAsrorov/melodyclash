@@ -122,7 +122,8 @@ md-sidenav.md-locked-open {
   font-weight: 800; }
 
 .subpage.clash {
-  height: auto; }
+  height: auto;
+  overflow: hidden; }
 
 .search-tooltip {
   font-size: 15px; }
@@ -353,7 +354,8 @@ map {
 .main-feed-wrapper {
   margin-bottom: 25px;
   margin-left: -6px;
-  height: 320px; }
+  height: 320px;
+  margin-bottom: 100px; }
 
 .feeds-wrapper {
   width: 100%;
@@ -380,6 +382,21 @@ map {
 
 .feed-note {
   font-size: 13px; }
+
+.md-button.md-default-theme.new-message {
+  border: 0px;
+  border-radius: 0px;
+  float: none;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  background: #f1f6fc;
+  color: #0B1C30;
+  font-weight: 800;
+  border-radius: 0px; }
+  .md-button.md-default-theme.new-message:hover {
+    background: #153459;
+    color: white; }
 
 .top-button-a {
   width: 100%; }

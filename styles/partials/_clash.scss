@@ -50,6 +50,7 @@ md-sidenav.md-locked-open {
 
 .subpage.clash {
   height: auto;
+  overflow: hidden;
 }
 
 .search-tooltip {
@@ -344,6 +345,7 @@ map {
   margin-bottom: 25px;
   margin-left: -6px;
   height: 320px;
+  margin-bottom: 100px;
 }
 
 .feeds-wrapper {
@@ -381,4 +383,22 @@ map {
 
 .feed-note {
   font-size: 13px;
+}
+
+.md-button.md-default-theme.new-message {
+  border: 0px;
+  border-radius: 0px;
+  float: none;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  background: lighten($theme-color, 85%);
+  color: $theme-color;
+  font-weight: 800;
+  border-radius: 0px;
+
+  &:hover {
+    background: lighten($theme-color, 10%);
+    color: white;
+  }
 }

@@ -58,6 +58,7 @@
 				<form role="form" ng-submit="vm.addMessage()">
 					<input class="form-control feed-input" placeholder="Share your thoughts! Press Enter to post." ng-model="vm.newMessage" autofocus>
 				</form>
+						<md-button class="new-message" ng-if="vm.thereIsNewMessage" ng-click="vm.showNewestMessage()">New Message! Click to see!</md-button>
 				<div class="list-group feeds-inner-wrapper">
             <div ng-repeat="message in vm.messages" class="list-group-item one-message">
                 <div class="view">
@@ -68,5 +69,4 @@
         </div>
 			</md-whiteframe>
 		</div>
-
 </div>

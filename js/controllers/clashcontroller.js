@@ -28,8 +28,8 @@ angular
       var lat = 30.141198;
       var lon = -38.787720;
       var center = new google.maps.LatLng(lat, lon);
-
       vm.username = localStorage.getItem('username');
+
       function setContent(artistObj) {
         var d = new Date(artistObj.on_sale_datetime);
 
@@ -276,6 +276,7 @@ angular
 
       vm.messages =  $firebaseArray(fireRef);
       vm.newMassage = '';
+      vm.thereIsNewMessage = false;
 
       vm.addMessage = function(){
         var newMessage = vm.newMessage.trim();
@@ -287,8 +288,18 @@ angular
             name: vm.username,
             message: newMessage
         });
+        vm.thereIsNewMessage = true;
         vm.newMessage = '';
     };
 
+    vm.showNewestMessage = function() {
+      var div = $('.feeds-inner-wrapper');
+      var o = div.offset().top; //gets the top position of the div
+      var h = div.outerHeight(); // gets the height of the div
+
+      div.scrollTop(o + h); //scrolls page to the bottom of the div
+
+      vm.thereIsNewMessage = false;
+    };
 
   });
