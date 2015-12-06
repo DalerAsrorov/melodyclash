@@ -44,6 +44,7 @@
 					</md-whiteframe>
 				 	<md-whiteframe class="md-whiteframe-z5 options-box video-box" layout="column" >
 								<div class="bio-nav nav-songs"> Related Artists </div>
+								<md-button id="to-the-left"> <ng-md-icon icon="keyboard_arrow_left" style="fill: white" size="100"></ng-md-icon>  </md-button>
 								<div class="video-section">
 									<a class="related-artist" ng-repeat="artist in vm.relatedAritsts" href="#/clash/{{vm.genre}}/artists/{{artist.name}}">
 										<md-button aria-label="button" class="raised related-artist-button">
@@ -51,8 +52,13 @@
 											<div class="caption"> {{ artist.name }} </div>
 										</md-button>
 									</a>
+
 								</div>
+								<md-button id="to-the-right">  <ng-md-icon icon="keyboard_arrow_right" style="fill: white" size="100"></ng-md-icon> </md-button>
 					</md-whiteframe>
+
+
+
 			</div>
 	</div>
 </div>

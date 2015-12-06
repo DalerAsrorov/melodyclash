@@ -70,5 +70,17 @@ angular
       }
     })
 
+    /* JQuery for the arrows */
 
+    // Right arrow
+    $("#to-the-right").click(function() {
+      var leftPos = $('.video-section').scrollLeft();
+      $(".video-section").animate({scrollLeft: leftPos + 350}, 350);
+    });
+
+    //Left arrow
+    $("#to-the-left").click(function() {
+      var leftPos = $('.video-section').scrollLeft();
+      $(".video-section").animate({scrollLeft: leftPos - 350}, 350);
+    });
   });

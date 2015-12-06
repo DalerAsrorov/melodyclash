@@ -513,7 +513,8 @@ input[type=range] {
     color: white; }
 
 .video-box {
-  margin: 20px 0px 0px 0px; }
+  margin: 20px 0px 0px 0px;
+  display: inline-block; }
 
 .video-section {
   height: 210px;
@@ -522,7 +523,8 @@ input[type=range] {
   white-space: nowrap;
   margin: 0;
   padding: 0;
-  width: auto; }
+  width: 84.95%;
+  float: left; }
 
 .related-artist {
   height: 100px;
@@ -570,6 +572,20 @@ input[type=range] {
   -webkit-box-shadow: 1px 5px 35px 0px white;
   -moz-box-shadow: 1px 5px 35px 0px white;
   box-shadow: 1px 5px 35px 0px white; }
+
+#to-the-right {
+  margin: 0;
+  height: 210px;
+  padding: 0;
+  width: 10px;
+  float: left; }
+
+#to-the-left {
+  margin: 0;
+  height: 210px;
+  padding: 0;
+  width: 10px;
+  float: left; }
 
 .md-button.md-raised:not([disabled]).box-albums {
   background: #9f6260; }
