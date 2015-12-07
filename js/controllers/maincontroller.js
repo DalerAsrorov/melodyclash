@@ -4,7 +4,7 @@ angular
     $scope.user = {};
     $scope.user.name = "";
     $scope.user.genre = "";
-
+    $scope.website = "http://www-scf.usc.edu/~asrorov/";
     $scope.nameIsEmpty = true;
     $scope.genreIsEmpty = true;
 

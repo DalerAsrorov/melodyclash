@@ -118,3 +118,21 @@ md-input-container.md-default-theme:not(.md-input-invalid).md-input-has-value la
       }
     }
 }
+
+.developer {
+  text-align: center;
+  font-weight: 800;
+  font-style: italic;
+  font-size: 22px;
+  margin-top: -10px;
+  position: relative;
+  top: -20px;
+  color: lighten($theme-color, 70%);
+
+  a {
+    text-decoration: none;
+    color: lighten($theme-color, 70%);
+
+    
+  }
+}
