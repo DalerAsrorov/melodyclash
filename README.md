@@ -3,6 +3,10 @@
 
 # Final Project -- MelodyClash
 
+## Warning! 
+
+The demo doesn't work currently because EchoNest API stopped its support of various services and suggested developers to use Spotify API instead. EchoNest provided very detailed information on popularity and trends of a particular artist, so it will take time to switch to Spotify API. I am planning to work on it soon and transition everything to Spotify API. I appologize for any inconvenience. :(
+
 ## Description
 Web application that allows users to find top artists, albums, songs, and events near their location based on the genre entered
 by the user. It shows all kinds of info about the best things happening near and has algorithms that solves the problem with
